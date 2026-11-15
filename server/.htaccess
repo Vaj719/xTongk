@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# POST /connect  ->  connect.php
+RewriteCond %{REQUEST_URI} ^/connect/?$
+RewriteRule ^connect/?$ connect.php [L,QSA]
+
+# keys.json must never be downloadable
+<Files "keys.json">
+    Require all denied
+</Files>
+
+# force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
