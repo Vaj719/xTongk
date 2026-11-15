@@ -1,0 +1,15 @@
+{
+    "bind_on_first_use": true,
+    "keys": {
+        "TONGK-DEMO-0001-2026": {
+            "exp": "2026-12-31 23:59:59",
+            "hwid": "",
+            "active": true
+        },
+        "TONGK-DEMO-0002-2026": {
+            "exp": "2027-06-30 23:59:59",
+            "hwid": "",
+            "active": true
+        }
+    }
+}
