@@ -4,11 +4,14 @@ RewriteEngine On
 RewriteCond %{REQUEST_URI} ^/connect/?$
 RewriteRule ^connect/?$ connect.php [L,QSA]
 
-# keys.json must never be downloadable
-<Files "keys.json">
-    Require all denied
-</Files>
-
 # force HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# never serve the key store, the throttle state or the core
+<FilesMatch "^(keys\.json|attempts\.json|lib\.php)$">
+    Require all denied
+</FilesMatch>
+
+# never serve the data folder
+RedirectMatch 403 ^/data/.*$
