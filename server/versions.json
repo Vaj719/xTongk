@@ -1,0 +1,11 @@
+{
+  "app": "VIP Tongk",
+  "package": "com.tongk.vip",
+  "dev": "@x_Tongk",
+  "channel": "https://t.me/PythonToolsIQ",
+  "api": "https://tongk.wisp.uno/connect",
+  "status_endpoint": "https://tongk.wisp.uno/v/status.json",
+  "versions": [
+    { "id": "1.0", "apk": "release/VIP_Tongk_v1.0.apk", "game_patch": "4.7.0.21758", "status": "stable" }
+  ]
+}
